@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>adaptive_demo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="2.3.0" />
+    <PackageReference Include="AdaptiveCards.Templating" Version="1.1.0" />
+    <PackageReference Include="FluffySpoon.AspNet.NGrok" Version="1.75.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Graph" Version="3.19.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.22.0" />
+    <PackageReference Include="Microsoft.O365.ActionableMessages.Utilities" Version="2.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+</Project>

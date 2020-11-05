@@ -37,7 +37,13 @@ dotnet run
 11. Update _Layouts.cshtml
 12. Update site.css
 
+# Backend Adapttive Card API
 
-Create 'assets' folder
+1. Register sender in https://aka.ms/publishoam (https://.+\.ngrok.io/api/)
+2. Copy 'assets' , fake-feedback.json and response-card.json
+3. Create FeedbackModel.cs
+4. Create FeedbackItem.cs
+5. Create CardController.cs
+
 
 

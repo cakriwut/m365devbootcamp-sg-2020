@@ -1,0 +1,47 @@
+@model adaptive_demo.Models.SendSurveyModel
+
+@{
+    ViewData["Title"] = "Send Survey";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary("")
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserPassword, new { @class = "control-label" })
+                @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Recipients, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.Recipients, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Message, new { @class = "control-label" })
+                @Html.TextAreaFor(m => m.Message, 14, 20, new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="pad-top">
+            <button type="submit" class="btn btn-success btn-lg margin-right">
+                <span class="glyphicon glyphicon-save"></span> Save
+            </button>
+            <a href="@Url.Action("Index")" class="btn btn-warning btn-lg">
+                <span class="glyphicon glyphicon-remove"></span> Cancel
+            </a>
+        </div>
+    </div>
+}
