@@ -17,7 +17,11 @@ dotnet add package Microsoft.Extensions.Configuration.Json
 dotnet add package Microsoft.Graph
 dotnet add package Microsoft.Identity.Client
 dotnet add package System.IdentityModel.Tokens.Jwt
+
+// Check if everything are working
+dotnet run
 ```
+
 
 Create 'assets' folder
 
