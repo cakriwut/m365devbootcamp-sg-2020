@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using FluffySpoon.AspNet.NGrok;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using adaptive_demo.Services;
 
 namespace adaptive_demo
 {
@@ -23,11 +21,15 @@ namespace adaptive_demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddNGrok();
+            services.AddTransient<ActionCard>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseNGrokAutomaticUrlDetection();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
